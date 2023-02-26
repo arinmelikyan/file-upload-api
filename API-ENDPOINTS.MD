@@ -2,7 +2,7 @@
 
 ### Base URL
 ```
-localhost:3000/api/v1
+localhost:4000/api/v1
 ```
 
 <br>
@@ -63,4 +63,31 @@ localhost:3000/api/v1
 #### DELETE by ID
 ```
 /user/id
+```
+
+### PDF FILE
+
+#### GET get all pdf files
+```
+/file
+```
+
+#### GET get pdf file by ID
+```
+/file/:id
+```
+
+#### POST create pdf file
+```
+/file
+```
+
+#### PUT update pdf file by ID
+```
+/file/id
+```
+
+#### DELETE pdf file by ID
+```
+/file/id
 ```

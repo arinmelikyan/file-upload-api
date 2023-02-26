@@ -11,6 +11,7 @@ It would be great if you can contribute features to this repo.
 * Register
 * Login
 * User
+* File upload
 
 <br>
 
