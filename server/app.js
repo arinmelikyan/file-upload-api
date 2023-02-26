@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const fileUpload = require('express-fileupload');
 require('dotenv').config();
 require('./middlewares/passport');
 require('./models/user');
@@ -20,6 +21,7 @@ app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
+app.use(fileUpload());
 
 app.get('/', (req, res) => {
   res.json({

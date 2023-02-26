@@ -10,6 +10,10 @@ const File = sequelize.define('File', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  file: {
+    type: DataTypes.BLOB('long'),
+    allowNull: false
+  }
 });
 
 module.exports = File;

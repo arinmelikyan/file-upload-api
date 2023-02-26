@@ -37,9 +37,15 @@ exports.getOne = async (req, res) => {
 // CREATE 
 exports.create = async (req, res) => {
   try {
-    const {fileName, userName} = req.body;
+    const file = req.files?.file;
 
-    const newFile = new File({ fileName, userName });
+    if (!file) {
+      return res.status(400).send('No files were uploaded.');
+    }
+
+    const { fileName, userName } = req.body;
+
+    const newFile = new File({ fileName, userName, file });
 
     const savedFile = await newFile.save();
     if(savedFile) {

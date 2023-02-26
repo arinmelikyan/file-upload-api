@@ -6,7 +6,7 @@ const authenticateJWT = require('../middlewares/authenticateJWT');
 router.get('/file', authenticateJWT, fileController.getAll);
 
 // POST create pdf file (protected route)
-router.post('/file', authenticateJWT, fileController.create);
+router.post('/file/upload', authenticateJWT, fileController.create);
 
 // GET pdf file by ID (unprotected route)
 router.get('/file/:id', fileController.getOne);
