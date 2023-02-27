@@ -2,6 +2,11 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/db');
 
 const File = sequelize.define('File', {
+  id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+  },
   fileName: {
     type: DataTypes.STRING,
     allowNull: false,
