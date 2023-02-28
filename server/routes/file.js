@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const fileController = require('../controllers/fileController');
 const authenticateJWT = require('../middlewares/authenticateJWT');
 
 // GET all pdf files (protected route)

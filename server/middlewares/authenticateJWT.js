@@ -6,6 +6,7 @@ const User = require('../models/user');
 
 const jwtOptions = {
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+  // eslint-disable-next-line no-undef
   secretOrKey: process.env.JWT_SECRET
 };
 
@@ -26,7 +27,7 @@ const jwtStrategy = new JWTStrategy(jwtOptions, (jwtPayload, done) => {
 passport.use(jwtStrategy);
 
 const authenticateJWT = (req, res, next) => {
-  passport.authenticate('jwt', { session: false }, (err, user, info) => {
+  passport.authenticate('jwt', { session: false }, (err, user) => {
     if (err) {
       return next(err);
     }

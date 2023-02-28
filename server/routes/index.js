@@ -1,5 +1,4 @@
 const express = require('express');
-const passport = require('passport');
 const registerApi = require('./register');
 const loginApi = require('./login');
 const userApi = require('./users');
